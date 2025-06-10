@@ -85,7 +85,7 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full h-full bg-black rounded-t-full pt-10 px-6 pb-10 mt-16">
+      <div className="w-60px h-full bg-black rounded-t-full pt-10 px-6 pb-10 mt-16">
         <div className="flex flex-col justify-center items-center gap-4 text-white">
 
            <div className="w-50% max-w-md flex flex-col gap-2 items-center">
