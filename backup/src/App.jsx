@@ -72,7 +72,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between bg-blue-400 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-between bg-blue-400 ">
       <div className="text-black text-sm font-semibold self-end pr-2">
         Streak {streak}
       </div>
@@ -85,35 +85,39 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full bg-black rounded-t-full pt-10 px-6 pb-10 mt-16">
-        <div className="flex flex-col gap-4 text-white">
-          <label>
-            Enter Count
-            <input
-              type="number"
-              className="w-full mt-1 p-2 rounded text-black"
-              value={count}
-              onChange={(e) => setCount(e.target.value)}
-            />
-          </label>
-          <label>
-            Date
-            <input
-              type="date"
-              className="w-full mt-1 p-2 rounded text-black"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              max={getToday()}
-            />
-          </label>
-          <button
-            className="bg-lime-400 text-black font-semibold py-2 rounded mt-2"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
+      <div className="w-full h-full bg-black rounded-t-full pt-10 px-6 pb-10 mt-16">
+        <div className="flex flex-col justify-center items-center gap-4 text-white">
+
+           <div className="w-50% max-w-md flex flex-col gap-2 items-center">
+              <label className="self-start">Enter Count</label>
+              <input
+                type="number"
+                className="w-full p-2 rounded text-black"
+                value={count}
+                onChange={(e) => setCount(e.target.value)}
+              />
+            </div>
+
+            <div className="w-80% max-w-md flex flex-col gap-2 ">
+              <label className="self-start">Enter Date</label>
+              <input
+                type="date"
+                className=" px-16 py-2 rounded text-black"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                max={getToday()}
+              />
+            </div>
+
+            <button
+              className="w-50% bg-lime-400 text-black font-semibold py-2 px-14 rounded mt-2"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
         </div>
       </div>
+
     </div>
   );
 }
